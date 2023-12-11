@@ -80,6 +80,17 @@ tasks.register('officialBuild') {
 
         args.add(".")
 
+        def buildxargs = [
+            "docker",
+            "buildx",
+            "create"
+        ]
+
+        exec {
+            workingDir "./official"
+            commandLine buildxargs
+        }
+
         exec {
             workingDir "./official"
             commandLine args
