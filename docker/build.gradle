@@ -70,6 +70,7 @@ tasks.register('officialBuild') {
         def args = [
             "docker",
             "build",
+            "--platform linux/amd64,linux/arm64",
             "--label=com.rundeck.version=$resolvedVersion",
             "--label=com.rundeck.commit=$commit"
         ]
