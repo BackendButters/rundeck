@@ -1,4 +1,4 @@
-FROM rundeck/ubuntu-base
+FROM --platform=linux/arm64 rundeck/ubuntu-base
 
 USER rundeck
 
